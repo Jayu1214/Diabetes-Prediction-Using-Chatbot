@@ -5,7 +5,9 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
     background-image: url(https://neurosciencenews.com/files/2023/08/chatbot-health-neurosicnes.jpg);
     background-size: cover;
-    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-blend-mode: multiply; /* Adjusts the blend mode for the background image */
 }
 
@@ -36,8 +38,6 @@ p1 {
     margin: 0 auto; /* Center the paragraph horizontally */
     max-width: 600px; /* Limit the maximum width of the paragraph */
 }
-
-
 
 .container-fluid {
     height: 100vh; /* Make the container full height of the viewport */
@@ -94,4 +94,3 @@ p1 {
     color: #fff;
     margin-bottom: 10px;
   }
-  
