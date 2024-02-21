@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Patient Care Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+<body>
+<h1><bold>Diabetic Patient Care</bold></h1>
+<h2>Welcome to ChatBot</h2>
+<p1>Hello and welcome to our AI Chatbot. Please enter the symptoms you are feeling, our
+  chatbot will help you as well as guide you with the severity and category of the diabetes you might 
+  have, and will also assist you with medications and further steps that are needed to be taken.
+
+</p1>
+<div class="container-fluid h-100">
+  <div class="row justify-content-center h-100">		
+    <div class="col-md-8 col-xl-6 chat">
+      <!-- Chatbot container -->
+      <div class="card">
+        <div class="card-header msg_head">
+          <div class="d-flex bd-highlight">
+            <div class="img_cont">
+              <img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img">
+              <span class="online_icon"></span>
+            </div>
+            <div class="user_info">
+              <span>ChatBot</span>
+              <p>Ask me anything!</p>
+            </div>
+          </div>
+        </div>
+        <div id="messageFormeight" class="card-body msg_card_body">
+        </div>
+        <div class="card-footer">
+          <form id="messageArea" class="input-group">
+            <input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
+            <div class="input-group-append">
+              <button type="submit" id="send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Section displaying questions -->
+    <div class="col-md-8 col-xl-6">
+      <h3>Questions</h3>
+      <p2>These are few questions that the chatbot might ask you for
+        knowing you and your symptoms better, so that it can give better
+        suggestions.
+      </p2>
+      <ol>
+        <li>Question 1</li>
+        <li>Question 2</li>
+        <li>Question 3</li>
+        <li>Question 4</li>
+        <li>Question 5</li>
+        <li>Question 6</li>
+        <li>Question 7</li>
+        <li>Question 8</li>
+        <li>Question 9</li>
+        <li>Question 10</li>
+        <li>Question 11</li>
+        <li>Question 12</li>
+        <li>Question 13</li>
+        <li>Question 14</li>
+        <li>Question 15</li>
+      </ol>
+    </div>
+  </div> 
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
