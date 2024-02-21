@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-image: url(https://neurosciencenews.com/files/2023/08/chatbot-health-neurosicnes.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-blend-mode: multiply; /* Adjusts the blend mode for the background image */
+}
+
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff; /* Set text color to white for better visibility on the background */
+    padding: 20px 0; /* Add padding to give some space around the text */
+}
+
+h2 {
+    text-align: center;
+    font-style: normal;
+    font-size: x-large;
+    color: #fff;
+}
+
+p1 {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: larger;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 10px 20px; /* Add padding to the top and bottom, and left and right */
+    margin: 0 auto; /* Center the paragraph horizontally */
+    max-width: 600px; /* Limit the maximum width of the paragraph */
+}
+
+
+
+.container-fluid {
+    height: 100vh; /* Make the container full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.chat {
+    max-width: 600px; /* Adjust the max-width of the chat container as needed */
+    width: 100%; /* Ensure the chat container takes full width of its parent */
+    margin-left: 220px;
+    margin-top: 1200px; /* Adjust the margin to move the chatbot downwards */
+}
+
+.card {
+    border: none; /* Remove border from card */
+}
+
+.msg_card_body {
+    height: 300px; /* Adjust the height of the message body as needed */
+    overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.card-footer {
+    border-top: none; /* Remove border from card footer */
+}
+
+/* Add styles for the questions section */
+.col-md-8.col-xl-6 {
+    padding: 20px;
+  }
+  
+  h3 {
+    font-size: 3em;
+    color: #fff;
+  }
+  
+  p2 {
+    font-size: 1em;
+    color : #fff;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.4); 
+  }
+  
+  ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+  
+  ol li {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
