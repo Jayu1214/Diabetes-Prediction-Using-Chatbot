@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(https://neurosciencenews.com/files/2023/08/chatbot-health-neurosicnes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+p {
+    color: aliceblue;
+}
+
+span {
+    color: aliceblue;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    font-style: normal;
+    font-size: x-large;
+    color: #fff;
+}
+
+p1 {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: larger;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat {
+    max-width: 600px;
+    width: 100%;
+    margin-left: 220px;
+    margin-top: 1200px;
+}
+
+.card {
+    border: none;
+}
+
+.msg_card_body {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.card-footer {
+    border-top: none;
+}
+
+.col-md-8.col-xl-6 {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 3em;
+    color: #fff;
+}
+
+p2 {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+ol li {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#nav-menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu-bar {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar a.home {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar a.about {
+    background-color: #2196F3;
+    color: white;
+}
+
+.navbar a.contact {
+    background-color: #f44336;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px 16px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #111;
+}
+
+.home {
+    background-color: #4CAF50;
+}
+
+.about {
+    background-color: #2196F3;
+}
+
+.contact {
+    background-color: #f44336;
+}
