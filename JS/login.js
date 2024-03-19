@@ -1,14 +1,28 @@
+const btnPopup = document.querySelector('.btnLogin-popup');
+const welcomeText = document.getElementById('welcome-text');
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
+const content = document.querySelector('.content'); 
 
+btnPopup.addEventListener('click', () => {
+    welcomeText.style.display = 'none';
+    wrapper.classList.add('active-popup'); 
+});
 
-registerLink.addEventListener('click', () => {wrapper.classList.add('active');});
+loginLink.addEventListener('click', () => { 
+    wrapper.classList.remove('active'); 
+    content.style.display = 'none'; 
+});
 
-loginLink.addEventListener('click', () => {wrapper.classList.remove('active');});
+registerLink.addEventListener('click', () => { 
+    wrapper.classList.add('active'); 
+    content.style.display = 'none'; 
+});
 
-btnPopup.addEventListener('click', () => {wrapper.classList.add('active-popup');});
-
-iconClose.addEventListener('click', () => {wrapper.classList.remove('active-popup');});
+iconClose.addEventListener('click', () => { 
+    wrapper.classList.remove('active-popup');
+    content.style.display = 'block'; 
+    welcomeText.style.display = 'block'; 
+});
