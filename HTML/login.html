@@ -5,61 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="/Diabetes-Prediction-Using-Chatbot/CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="/static/login.css">
 </head>
 <body>
     <header>
-        <h2 class="logo">Logo</h2>
+        <h2 class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKZgRacjtH2ONiNcxC0Y7irOmstRN6YSsdOS-sz9JdP5E68w4h" alt="Logo"></h2>
         <nav class="navigation">
-            <a href="#">Home</a>
-            <a href="#">About us</a>
-            <a href="#">Contact</a>
             <button class="btnLogin-popup">Login</button>
         </nav>
     </header>
+    <div class="content">
+        <h2> <p id="welcome-text">
+             Welcome to our Website<br>
+             Please login to continue</p>
+         </h2>   
+     </div>
+ 
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
 
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="#">
+            <form action="/login" method="POST">
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" name="username" required>
+                    <label>Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
-                    <label><input type="checkbox">Remember me </label>
+                    <label><input type="checkbox" name="remember">Remember me </label>
                     <a href="#"> Forget Password?</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="login-register">
                     <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
                 </div>
+                {% if error %}
+                <div class="alert" role="alert">
+                {{ error }}
+                </div>
+                {% endif %}
             </form>
         </div>
 
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="#">
+            <form action="/register" method="POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
+                    <input type="text" name="username" required>
                     <label>Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
@@ -76,7 +85,7 @@
 
     </div>
 
-    <script src="/Diabetes-Prediction-Using-Chatbot/JS/login.js"></script>
+    <script src="/static/login.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
    
