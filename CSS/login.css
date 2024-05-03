@@ -11,6 +11,7 @@ header{
     left: 0;
     width: 100%;
     padding: 20px 100px;
+    color: #ffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,9 +27,9 @@ body{
     background-position: center;
 }
 
-.logo{
+.DiabeticPatientCare{
     font-size: 2em;
-    color: white;
+    color:#ffff;
     user-select: none;
     top: 5px;
     left: 10px;
