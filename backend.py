@@ -17,6 +17,9 @@ mydb = mysql.connector.connect(
     database="pbl1"
 )
 
+# Password pattern for validation
+PASSWORD_PATTERN = r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,}$'
+
 # Initialize tokenizer and model for chatbot
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
@@ -72,6 +75,11 @@ def register():
         email = request.form['email']
         password = request.form['password']
 
+    # Validate password
+        if not re.match(PASSWORD_PATTERN, password):
+            message = "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character."
+            return render_template('login.html', message=message)
+        
         # Hash the password before storing it in the database
         hashed_password = generate_password_hash(password)
 
