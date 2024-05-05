@@ -362,3 +362,7 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: 15px !important;
     }
 }
+.msg_card_body {
+	height: 400px; /* Adjust as needed */
+	overflow-y: auto; /* Enable vertical scrolling */
+  }
