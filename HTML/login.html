@@ -71,6 +71,9 @@
                     <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
+                {% if message %}
+                <p style="color: white; font-size: small;">{{ message }}</p>
+                {% endif %}
                 <div class="remember-forget">
                     <!-- <label><input type="checkbox">I agree to terms and conditions </label> -->
 
