@@ -1,6 +1,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,32 +84,60 @@
 
 <script>
   $(document).ready(function() {
+    // Function to scroll to the bottom of the chat window
+    function scrollToBottom() {
+      var chatWindow = $("#messageFormeight");
+      chatWindow.scrollTop(chatWindow[0].scrollHeight);
+    }
+
     $("#messageArea").on("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
       const date = new Date();
       const hour = date.getHours();
       const minute = date.getMinutes();
-      const str_time = hour+":"+minute;
+      const str_time = hour + ":" + (minute < 10 ? "0" + minute : minute);
+
       var rawText = $("#text").val();
 
-      var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
-      
+      var userHtml = 
+        '<div class="d-flex justify-content-end mb-4">' +
+        '<div class="msg_cotainer_send">' + rawText + 
+        '<span class="msg_time_send">' + str_time + '</span>' +
+        '</div>' +
+        '<div class="img_cont_msg">' +
+        '<img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg">' +
+        '</div>' +
+        '</div>';
+
       $("#text").val("");
       $("#messageFormeight").append(userHtml);
 
+      scrollToBottom(); // Auto-scroll after adding the user message
+
       $.ajax({
-        data: {
-          msg: rawText,	
-        },
+        data: { msg: rawText },
         type: "POST",
         url: "/get",
       }).done(function(data) {
-        var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
+        var botHtml = 
+          '<div class="d-flex justify-content-start mb-4">' +
+          '<div class="img_cont_msg">' +
+          '<img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img_msg">' +
+          '</div>' +
+          '<div class="msg_cotainer">' + data + 
+          '<span class="msg_time">' + str_time + '</span>' +
+          '</div>' +
+          '</div>';
+
         $("#messageFormeight").append($.parseHTML(botHtml));
+
+        scrollToBottom(); // Auto-scroll after adding the bot message
       });
-      event.preventDefault();
     });
   });
 </script>
+
 
 </body>
 </html>
